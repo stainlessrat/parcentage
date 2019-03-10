@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">Percentage</string>
+    <string name="btn_begin">Расчет процентов</string>
+    <string name="come_in_persent_of_number">Хотите расчитать процент от числа? Выполните следующие действия: </string>
+    <string name="come_in_number_of_number">Хотите расчитать число от числа в процентах? Выполните следующие действия: </string>
+    <string name="come_in_increase">Хотите увеличить число на процент? Выполните следующие действия: </string>
+    <string name="come_in_decreate">Хотите уменьшить число на процент? Выполните следующие действия: </string>
+    <string name="in_number">Введите число: </string>
+    <string name="in_persent">Введите процент: </string>
+    <string name="in_two_number">От числа: </string>
+    <string name="btn_reset">Сброс результата</string>
+    <string name="str_persent_of_number">процент от числа</string>
+    <string name="str_number_of_number">Число от числа в процентах</string>
+    <string name="str_increase">Увеличить на процент</string>
+    <string name="str_decrease">Уменьшить на процент</string>
+    <string name="star">Оцени приложение</string>
+    <string name="share">Поделиться</string>
+</resources>

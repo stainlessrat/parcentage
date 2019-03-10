@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <Button
+        android:id="@+id/btn_percent_of_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_persent_of_number"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btn_number_of_number_in_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_number_of_number"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btn_increase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_increase"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btn_decrease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_decrease"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>

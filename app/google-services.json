@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "565738451154",
+    "firebase_url": "https://parcentage.firebaseio.com",
+    "project_id": "parcentage",
+    "storage_bucket": "parcentage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565738451154:android:6c99c7d5975a8e82",
+        "android_client_info": {
+          "package_name": "ru.ucoz.rezept_day.percentage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565738451154-ok7icvl92b83h8l3c172qrlfsn0j8tnk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.ucoz.rezept_day.percentage",
+            "certificate_hash": "ff3604ca2c84f1537f99b49c13ec3b06351bbe0a"
+          }
+        },
+        {
+          "client_id": "565738451154-284pd4vpu1moc2ooauc327g1cplnbli4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt_0eYZ1Eu4NVQaVDb-010m8Kyt0dvK5c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565738451154-284pd4vpu1moc2ooauc327g1cplnbli4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
