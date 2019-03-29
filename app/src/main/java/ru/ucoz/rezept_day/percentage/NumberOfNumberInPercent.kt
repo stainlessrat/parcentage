@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import kotlinx.android.synthetic.main.activity_persent_of_number.*
+import ru.ucoz.rezept_day.percentage.model.MyCalculete
 
 class NumberOfNumberInPercent:Activity() {
 
@@ -26,7 +27,7 @@ class NumberOfNumberInPercent:Activity() {
                     MyCalculete.in_pers = (percent.text.toString()).toDouble()
                     if (number.text.length != 0) {
                         MyCalculete.in_number = (number.text.toString()).toDouble()
-                        out_result.text = MyCalculete.numberOfNumberPercent()
+                        out_result.text = MyCalculete.getNumberOfNumberPercent()
                     }
                 } else out_result.text = ""
             }
@@ -47,7 +48,7 @@ class NumberOfNumberInPercent:Activity() {
                     MyCalculete.in_number = (number.text.toString()).toDouble()
                     if (percent.text.length != 0) {
                         MyCalculete.in_pers = (percent.text.toString()).toDouble()
-                        out_result.text = MyCalculete.numberOfNumberPercent()
+                        out_result.text = MyCalculete.getNumberOfNumberPercent()
                     }
                 } else out_result.text = ""
 

@@ -1,49 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/come_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:text="@string/come_in_number_of_number"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:text="@string/come_in_number_of_number"/>
+        android:textSize="18sp" />
 
     <LinearLayout
         android:id="@+id/in_info_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/come_in">
+        android:layout_below="@id/come_in"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="2"
             android:text="@string/in_number"
-            android:layout_margin="10dp"
             android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="numberDecimal"
-            android:gravity="end"
-            android:ems="10"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="end"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -56,25 +53,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/in_two_number"
-            android:layout_weight="2"
             android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:text="@string/in_two_number"
             android:textColor="@color/colorPrimary"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/percent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="numberDecimal"
-            android:gravity="end"
-            android:ems="10"
             android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="end"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -82,31 +78,29 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/colorPrimary"
         android:layout_below="@id/in_info_persent"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/out_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/line"
-        android:gravity="end"
         android:layout_margin="10dp"
+        android:gravity="end"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_reset"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
         android:background="@color/colorPrimary"
+        android:text="@string/btn_reset"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
-        />
+        android:textSize="18sp" />
 </RelativeLayout>

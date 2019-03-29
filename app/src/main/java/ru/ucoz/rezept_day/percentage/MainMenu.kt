@@ -37,30 +37,30 @@ class MainMenu: AppCompatActivity(){
             startActivity(d)
         }
 
-        //Реклама
-        //ca-app-pub-6832799780005399~3346139569
-        MobileAds.initialize(this, "ca-app-pub-6832799780005399~3346139569")
-
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-6832799780005399/2066090758"
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
-        //mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build())
-
-
-        mInterstitialAd.adListener = object : AdListener() {
-            override fun onAdClosed() {
-                closeExit()
-            }
-        }
+//        //Реклама межстраничная
+//        //ca-app-pub-6832799780005399~3346139569
+//        MobileAds.initialize(this, "ca-app-pub-6832799780005399~3346139569")
+//
+//        mInterstitialAd = InterstitialAd(this)
+//        mInterstitialAd.adUnitId = "ca-app-pub-6832799780005399/2066090758"
+//        mInterstitialAd.loadAd(AdRequest.Builder().build())
+//        //mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build())
+//
+//
+//        mInterstitialAd.adListener = object : AdListener() {
+//            override fun onAdClosed() {
+//                closeExit()
+//            }
+//        }
 
     }
 
     override fun onBackPressed() {
-        if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
-        }else {
+//        if (mInterstitialAd.isLoaded) {
+//            mInterstitialAd.show()
+//        }else {
             closeExit()
-        }
+//        }
     }//нажата кнопка назад
 
     fun closeExit(){//обработка закрытия приложения, без перехода на предыдущую активность
