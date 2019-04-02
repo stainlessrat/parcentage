@@ -3,11 +3,18 @@ package ru.ucoz.rezept_day.percentage
 import android.app.Activity
 import android.os.Bundle
 import android.text.Editable
+import android.text.Layout
 import android.text.TextWatcher
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.activity_persent_of_number.*
 import ru.ucoz.rezept_day.percentage.present.MyPresent
 
 class PercentOfNumber:Activity() {
+
+    private lateinit var anim: Animation
+    private lateinit var myLayout: RelativeLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,14 +30,7 @@ class PercentOfNumber:Activity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                if (percent.text.length != 0){
-//                    MyCalculete.in_pers = (percent.text.toString()).toDouble()
-//                    if (number.text.length != 0) {
-//                        MyCalculete.in_number = (number.text.toString()).toDouble()
-//                        out_result.text = MyCalculete.getPersentOfNumber()
-//                    }
-//                } else out_result.text = ""
-                MyPresent.changeText(percent,number,out_result)
+                MyPresent.changeText(percent,number,out_result, MyPresent.PERSENT_OF_NUMBER)
             }
 
 
@@ -45,24 +45,28 @@ class PercentOfNumber:Activity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                if (number.text.length != 0) {
-//                    MyCalculete.in_number = (number.text.toString()).toDouble()
-//                    if (percent.text.length != 0) {
-//                        MyCalculete.in_pers = (percent.text.toString()).toDouble()
-//                        out_result.text = MyCalculete.getPersentOfNumber()
-//                    }
-//                } else out_result.text = ""
-                MyPresent.changeText(number, percent,out_result)
-
+                MyPresent.changeText(number, percent,out_result, MyPresent.PERSENT_OF_NUMBER)
             }
         })
 
         btn_reset.setOnClickListener {
-            percent.text = null
-            number.text = null
-            out_result.text = ""
+            MyPresent.clearText(number, percent, out_result)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        myLayout = findViewById<RelativeLayout>(R.id.myLayout)
+        anim = AnimationUtils.loadAnimation(this, R.anim.scale_up)
+        myLayout.startAnimation(anim)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        myLayout = findViewById<RelativeLayout>(R.id.myLayout)
+        anim = AnimationUtils.loadAnimation(this, R.anim.scale_down)
+        myLayout.startAnimation(anim)
     }
 }
 

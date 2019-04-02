@@ -64,8 +64,8 @@ class MainMenu: AppCompatActivity(){
     }//нажата кнопка назад
 
     fun closeExit(){//обработка закрытия приложения, без перехода на предыдущую активность
-        moveTaskToBack(true);
         super.onBackPressed();
+        moveTaskToBack(true);
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -101,28 +101,6 @@ class MainMenu: AppCompatActivity(){
             } else -> return super.onOptionsItemSelected(item)
 
         }
-    }
-
-    override fun onStart() {//колбэк - экран виден, можем проигнорировать, нет особой разницы между onStart и onResume
-        // Важен только при разделении экрана, когда один экран активен, а другой нет
-        super.onStart()
-    }
-
-    override fun onResume() {//колбэк - экран работает, можно запускать анимацию, все процессы
-        super.onResume()
-    }
-
-    override fun onPause() {//Прекратит работу, нажет HOME или Back или зазвонит телефон
-        super.onPause() //Здесь нужно остановить все, что мы запуститли в onResume. И нужно быть готовым к тому что
-        //в нашем приложении ничего большен не будет вызвано в нашем Активити
-    }
-
-    override fun onStop() {//Колбэк симитричный onStart, редко используют, т.к. все самое важное останавливают в onPause
-        super.onStop()
-    }
-
-    override fun onDestroy() {//Колбэк удаляет из системы все данные программы, например можно удалить закэщированные данные
-        super.onDestroy();
     }
 }
 
