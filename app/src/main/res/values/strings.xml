@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Percentage</string>
+    <string name="app_name" translatable="false">Расчет процентов</string>
     <string name="btn_begin">Расчет процентов</string>
     <string name="come_in_persent_of_number">Хотите расчитать процент от числа? Выполните следующие действия: </string>
     <string name="come_in_number_of_number">Хотите расчитать число от числа в процентах? Выполните следующие действия: </string>

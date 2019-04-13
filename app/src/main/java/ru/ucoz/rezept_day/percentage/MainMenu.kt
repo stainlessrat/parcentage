@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import android.widget.Toast.makeText
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -14,26 +16,35 @@ import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainMenu: AppCompatActivity(){
 
-    lateinit var mInterstitialAd: InterstitialAd//Реклама
+    //lateinit var mInterstitialAd: InterstitialAd//Реклама
+    companion object {
+        val MENU_ITEM = "menu_item"
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
         btn_percent_of_number.setOnClickListener {
-            val a = Intent(this, PercentOfNumber::class.java)
+            val a = Intent(this, CountActivity::class.java)
+            //Toast.makeText(this, (btn_percent_of_number.getTag()).toString(), Toast.LENGTH_SHORT).show()
+            a.putExtra(MENU_ITEM, btn_percent_of_number.getTag().toString())
             startActivity(a)
         }
         btn_number_of_number_in_percent.setOnClickListener {
-            val b = Intent(this, NumberOfNumberInPercent::class.java)
+            val b = Intent(this, CountActivity::class.java)
+            b.putExtra(MENU_ITEM, btn_number_of_number_in_percent.getTag().toString())
             startActivity(b)
         }
         btn_increase.setOnClickListener {
-            val c = Intent(this, Increase::class.java)
+            val c = Intent(this, CountActivity::class.java)
+            c.putExtra(MENU_ITEM, btn_increase.getTag().toString())
             startActivity(c)
         }
         btn_decrease.setOnClickListener {
-            val d = Intent(this, Decrease::class.java)
+            val d = Intent(this, CountActivity::class.java)
+            d.putExtra(MENU_ITEM, btn_decrease.getTag().toString())
             startActivity(d)
         }
 

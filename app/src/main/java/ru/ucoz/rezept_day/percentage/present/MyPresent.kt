@@ -18,12 +18,11 @@ class MyPresent {
                 if (viewNumber.text.length != 0) {
                     MyCalculete.in_number = (viewNumber.text.toString()).toDouble()
                     when(i){
-                        0 -> viewOutResult.text = MyCalculete.getPersentOfNumber()
-                        1 -> viewOutResult.text = MyCalculete.getNumberOfNumberPercent()
-                        2 -> viewOutResult.text = MyCalculete.getIncrease()
-                        3 -> viewOutResult.text = MyCalculete.getDecrease()
+                        PERSENT_OF_NUMBER -> viewOutResult.text = MyCalculete.getPersentOfNumber()
+                        NUMBER_OF_NUMBER_PERCENT -> viewOutResult.text = MyCalculete.getNumberOfNumberPercent()
+                        INCREASE -> viewOutResult.text = MyCalculete.getIncrease()
+                        DECREASE -> viewOutResult.text = MyCalculete.getDecrease()
                     }
-
                 }
             } else viewOutResult.text = ""
         }

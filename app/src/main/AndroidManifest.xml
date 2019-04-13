@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.ucoz.rezept_day.percentage">
-
     <!-- ca-app-pub-6832799780005399~3346139569 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- ca-app-pub-6832799780005399~3346139569 -->
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon_my_percent"
@@ -16,16 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".CountActivity"></activity>
         <!-- ca-app-pub-6832799780005399~3346139569 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6832799780005399~3346139569" />
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <!-- ca-app-pub-6832799780005399~3346139569 -->
-
+            android:value="@integer/google_play_services_version" /> <!-- ca-app-pub-6832799780005399~3346139569 -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -69,14 +65,10 @@
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- ca-app-pub-6832799780005399~3346139569 -->
+        </activity> <!-- ca-app-pub-6832799780005399~3346139569 -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <!-- ca-app-pub-6832799780005399~3346139569 -->
-
     </application>
 
 </manifest>
